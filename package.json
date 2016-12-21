@@ -1,0 +1,19 @@
+{
+  "name": "s3-upload",
+  "version": "1.0.0",
+  "description": "upload large assets to AWS S3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Stephen Koch <stephen.koch@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skoch/s3-upload.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "s3": "^4.4.0"
+  }
+}
