@@ -1,9 +1,10 @@
 {
   "name": "s3-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "upload large assets to AWS S3",
   "main": "index.js",
   "scripts": {
+    "version": "changes",
     "start": "node index.js"
   },
   "author": "Stephen Koch <stephen.koch@gmail.com>",
@@ -15,5 +16,8 @@
   "dependencies": {
     "dotenv": "^2.0.0",
     "s3": "^4.4.0"
+  },
+  "devDependencies": {
+    "@studio/changes": "^1.0.4"
   }
 }

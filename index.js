@@ -28,8 +28,8 @@ var fileName = parts[parts.length - 1];
 var params = {
     localFile: localFile,
     s3Params: {
-        Bucket: AWS_S3_BUCKET,
-        Key: `${AWS_FILE_PATH}${fileName}`,
+        Bucket: process.env.AWS_S3_BUCKET,
+        Key: `${process.env.AWS_FILE_PATH}${fileName}`,
         ACL: "public-read"
     },
 };
@@ -48,5 +48,5 @@ uploader.on('progress', function() {
     process.stdout.write(`progress: ${pct}%`);
 });
 uploader.on('end', function() {
-    console.log(`\ndone ... \nfile access: https://s3.amazonaws.com/${AWS_S3_BUCKET}/${AWS_FILE_PATH}${fileName}`);
+    console.log(`\ndone ... \nfile access: https://s3.amazonaws.com/${process.env.AWS_S3_BUCKET}/${process.env.AWS_FILE_PATH}${fileName}`);
 });
